@@ -1,10 +1,13 @@
 /* Imports */
+import { getRandomItem } from './utils.js';
 
 /* State */
-let gameState = 'results';
-let gameOutcome = 'lose';
-let userThrow = 'scissors';
-let opponentThrow = 'scissors';
+let gameState = 'shoot';
+let gameOutcome = '';
+let userThrow = '';
+let opponentThrow = '';
+
+const throwOptions = ['rock', 'paper', 'scissors'];
 /* Actions */
 function loadPage() {
     updateDisplay();
@@ -12,9 +15,35 @@ function loadPage() {
 
 /* Components */
 
-function throwGesture(gesture) {
-    console.log('threw:' + gesture);
-}
+// function throwGesture(gesture) {
+//     console.log('throw:' + gesture);
+//     gameState = 'results';
+//     opponentThrow = getRandomItem(throwOptions);
+//     userThrow = gesture;
+//     if (opponentThrow === gesture) {
+//         gameOutcome = 'draw';
+//     }
+//     if (opponentThrow === 'rock' && userThrow === 'paper') {
+//         gameOutcome = 'win';
+//     }
+//     if (opponentThrow === 'paper' && userThrow === 'scissors') {
+//         gameOutcome = 'win';
+//     }
+//     if (opponentThrow === 'scissors' && userThrow === 'rock') {
+//         gameOutcome = 'win';
+//     }
+//     if (opponentThrow === 'paper' && userThrow === 'rock') {
+//         gameOutcome = 'lose';
+//     }
+//     if (opponentThrow === 'scissors' && userThrow === 'paper') {
+//         gameOutcome = 'lose';
+//     }
+//     if (opponentThrow === 'rock' && userThrow === 'scissors') {
+//         gameOutcome = 'lose';
+//     }
+//     // upadte display
+//     updateDisplay();
+// }
 
 /* Component */
 // get DOM
@@ -33,13 +62,20 @@ function updateDisplay() {
             rockButton.classList.remove('selected', 'winner');
             paperButton.classList.remove('selected', 'winner');
             scissorsButton.classList.remove('selected', 'winner');
+            displayOutcome.textContent = 'Shoot!';
             break;
         case 'results':
             //display opponent throw
             opponentThrowImg.src = './assets/' + opponentThrow + '.png';
             if (gameOutcome === 'lose') {
                 opponentThrowImg.classList.add('winner');
+                displayOutcome.textContent = 'You Lose!';
+            } else if (gameOutcome === 'draw') {
+                displayOutcome.textContent = 'Draw...';
+            } else if (gameOutcome === 'win') {
+                displayOutcome.textContent = 'You Win!';
             }
+
             //show user's throw
             switch (userThrow) {
                 case 'rock':
@@ -67,15 +103,15 @@ function updateDisplay() {
     }
 }
 // event listeners
-rockButton.addEventListener('click', () => {
-    throwGesture('rock');
-});
-paperButton.addEventListener('click', () => {
-    throwGesture('paper');
-});
-scissorsButton.addEventListener('click', () => {
-    throwGesture('scissors');
-});
+// rockButton.addEventListener('click', () => {
+//     throwGesture('rock');
+// });
+// paperButton.addEventListener('click', () => {
+//     throwGesture('paper');
+// });
+// scissorsButton.addEventListener('click', () => {
+//     throwGesture('scissors');
+// });
 
 /* Component Play Again*/
 // get DOM
