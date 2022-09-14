@@ -35,16 +35,27 @@
 
         <main>
             <div id="gameboard">
-                <div id="opponent-gesture">
-                    <img src="./assets/ready.png" alt="Thumbs up. Ready to play." />
+                <div id="opponent">
+                    <div id="opponent-gesture">
+                        <!-- <img src="./assets/ready.png" alt="Thumbs up. Ready to play." /> -->
+                        <img src="./assets/scissors.png" alt="" class="winner" />
+                    </div>
                 </div>
-                <h2 id="outcome">you win</h2>
-                <div id="player-choices">
-                    <button id="rock"><img src="./assets/rock.png" alt="Rock" /></button>
-                    <button id="paper"><img src="./assets/paper.png" alt="Rock" /></button>
-                    <button id="scissors"><img src="./assets/scissors.png" alt="Rock" /></button>
+                <div id="player">
+                    <div>
+                        <h2 id="outcome">You Lose!</h2>
+                    </div>
+                    <div id="player-choices">
+                        <button id="rock"><img src="./assets/rock.png" alt="Rock" /></button>
+                        <button id="paper" class="selected">
+                            <img src="./assets/paper.png" alt="Rock" />
+                        </button>
+                        <button id="scissors">
+                            <img src="./assets/scissors.png" alt="Rock" />
+                        </button>
+                    </div>
+                    <div><button id="play-again-button">Play Again</button></div>
                 </div>
-                <button id="play-again-button">Play Again</button>
             </div>
         </main>
     </body>

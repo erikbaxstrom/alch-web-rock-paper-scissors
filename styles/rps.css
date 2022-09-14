@@ -1,0 +1,45 @@
+#gameboard {
+    width: 600px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 auto;
+}
+
+#opponent {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+#player {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+
+#player-choices {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 200px 200px 200px;
+    gap: 10px;
+}
+
+#player-choices button,
+#opponent-gesture img {
+    border-radius: 50px;
+}
+
+.selected {
+    transform: translateY(-60px);
+}
+
+.winner {
+    box-shadow: 0px 0px 20px 10px #5e5; /* right down blur spread color*/
+}
+
+.hidden {
+    display: none !important;
+}
