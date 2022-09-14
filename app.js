@@ -15,35 +15,35 @@ function loadPage() {
 
 /* Components */
 
-// function throwGesture(gesture) {
-//     console.log('throw:' + gesture);
-//     gameState = 'results';
-//     opponentThrow = getRandomItem(throwOptions);
-//     userThrow = gesture;
-//     if (opponentThrow === gesture) {
-//         gameOutcome = 'draw';
-//     }
-//     if (opponentThrow === 'rock' && userThrow === 'paper') {
-//         gameOutcome = 'win';
-//     }
-//     if (opponentThrow === 'paper' && userThrow === 'scissors') {
-//         gameOutcome = 'win';
-//     }
-//     if (opponentThrow === 'scissors' && userThrow === 'rock') {
-//         gameOutcome = 'win';
-//     }
-//     if (opponentThrow === 'paper' && userThrow === 'rock') {
-//         gameOutcome = 'lose';
-//     }
-//     if (opponentThrow === 'scissors' && userThrow === 'paper') {
-//         gameOutcome = 'lose';
-//     }
-//     if (opponentThrow === 'rock' && userThrow === 'scissors') {
-//         gameOutcome = 'lose';
-//     }
-//     // upadte display
-//     updateDisplay();
-// }
+function throwGesture(gesture) {
+    // console.log('throw:' + gesture);
+    gameState = 'results';
+    opponentThrow = getRandomItem(throwOptions);
+    userThrow = gesture;
+    if (opponentThrow === gesture) {
+        gameOutcome = 'draw';
+    }
+    if (opponentThrow === 'rock' && userThrow === 'paper') {
+        gameOutcome = 'win';
+    }
+    if (opponentThrow === 'paper' && userThrow === 'scissors') {
+        gameOutcome = 'win';
+    }
+    if (opponentThrow === 'scissors' && userThrow === 'rock') {
+        gameOutcome = 'win';
+    }
+    if (opponentThrow === 'paper' && userThrow === 'rock') {
+        gameOutcome = 'lose';
+    }
+    if (opponentThrow === 'scissors' && userThrow === 'paper') {
+        gameOutcome = 'lose';
+    }
+    if (opponentThrow === 'rock' && userThrow === 'scissors') {
+        gameOutcome = 'lose';
+    }
+    // update display
+    updateDisplay();
+}
 
 /* Component */
 // get DOM
