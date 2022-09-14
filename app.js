@@ -103,15 +103,15 @@ function updateDisplay() {
     }
 }
 // event listeners
-// rockButton.addEventListener('click', () => {
-//     throwGesture('rock');
-// });
-// paperButton.addEventListener('click', () => {
-//     throwGesture('paper');
-// });
-// scissorsButton.addEventListener('click', () => {
-//     throwGesture('scissors');
-// });
+rockButton.addEventListener('click', () => {
+    throwGesture('rock');
+});
+paperButton.addEventListener('click', () => {
+    throwGesture('paper');
+});
+scissorsButton.addEventListener('click', () => {
+    throwGesture('scissors');
+});
 
 /* Component Play Again*/
 // get DOM
