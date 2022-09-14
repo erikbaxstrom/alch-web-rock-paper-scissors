@@ -12,6 +12,10 @@ function loadPage() {
 
 /* Components */
 
+function throwGesture(gesture) {
+    console.log('threw:' + gesture);
+}
+
 /* Component */
 // get DOM
 const opponentThrowImg = document.getElementById('opponent-gesture');
@@ -63,9 +67,15 @@ function updateDisplay() {
     }
 }
 // event listeners
-
-/* Run page load code */
-loadPage();
+rockButton.addEventListener('click', () => {
+    throwGesture('rock');
+});
+paperButton.addEventListener('click', () => {
+    throwGesture('paper');
+});
+scissorsButton.addEventListener('click', () => {
+    throwGesture('scissors');
+});
 
 /* Component Play Again*/
 // get DOM
@@ -76,3 +86,6 @@ loadPage();
 // get DOM
 // display
 // event listeners
+
+/* Run page load code */
+loadPage();
