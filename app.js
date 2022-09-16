@@ -21,7 +21,6 @@ function loadPage() {
 /* Components */
 
 function throwGesture(gesture) {
-    // console.log('throw:' + gesture);
     gameState = 'results';
     opponentThrow = getRandomItem(throwOptions);
     userThrow = gesture;
@@ -157,7 +156,6 @@ scissorsButton.addEventListener('click', () => {
 });
 
 playAgainButton.addEventListener('click', () => {
-    console.log('click');
     playAgain();
 });
 /* Component Play Again*/
