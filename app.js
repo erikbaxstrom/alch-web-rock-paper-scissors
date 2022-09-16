@@ -45,6 +45,14 @@ function throwGesture(gesture) {
     updateDisplay();
 }
 
+function playAgain() {
+    gameState = 'shoot';
+    gameOutcome = '';
+    userThrow = '';
+    opponentThrow = '';
+    updateDisplay();
+}
+
 /* Component */
 // get DOM
 const opponentThrowImg = document.getElementById('opponent-gesture');
@@ -65,6 +73,10 @@ function updateDisplay() {
             scissorsButton.classList.remove('selected', 'winner');
             displayOutcome.textContent = 'Shoot!';
             playAgainButton.classList.add('hidden');
+            rockButton.disabled = false;
+            paperButton.disabled = false;
+            scissorsButton.disabled = false;
+
             break;
         case 'results':
             //display opponent throw
@@ -120,6 +132,10 @@ scissorsButton.addEventListener('click', () => {
     throwGesture('scissors');
 });
 
+playAgainButton.addEventListener('click', () => {
+    console.log('click');
+    playAgain();
+});
 /* Component Play Again*/
 // get DOM
 
