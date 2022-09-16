@@ -6,11 +6,16 @@ let gameState = 'shoot';
 let gameOutcome = '';
 let userThrow = '';
 let opponentThrow = '';
+//scoreboard
+let opponentScore = 2;
+let drawScore = 6;
+let playerScore = 14;
 
 const throwOptions = ['rock', 'paper', 'scissors'];
 /* Actions */
 function loadPage() {
     updateDisplay();
+    updateScoreboard();
 }
 
 /* Components */
@@ -43,6 +48,7 @@ function throwGesture(gesture) {
     }
     // update display
     updateDisplay();
+    // updateScoreboard();
 }
 
 function playAgain() {
@@ -61,6 +67,10 @@ const rockButton = document.getElementById('rock-button');
 const paperButton = document.getElementById('paper-button');
 const scissorsButton = document.getElementById('scissors-button');
 const playAgainButton = document.getElementById('play-again-button');
+//scoreboard
+const opponentScoreDisplay = document.getElementById('opponent-score-display');
+const drawScoreDisplay = document.getElementById('draw-score-display');
+const playerScoreDisplay = document.getElementById('player-score-display');
 
 // display
 function updateDisplay() {
@@ -121,6 +131,13 @@ function updateDisplay() {
             playAgainButton.classList.remove('hidden');
     }
 }
+
+function updateScoreboard() {
+    opponentScoreDisplay.textContent = opponentScore;
+    drawScoreDisplay.textContent = drawScore;
+    playerScoreDisplay.textContent = playerScore;
+}
+
 // event listeners
 rockButton.addEventListener('click', () => {
     throwGesture('rock');
