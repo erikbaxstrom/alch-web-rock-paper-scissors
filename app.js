@@ -67,7 +67,7 @@ function playAgain() {
 
 /* Component */
 // get DOM
-const opponentThrowImg = document.getElementById('opponent-gesture');
+const opponentThrowImg = document.getElementById('opponent-gesture-img');
 const displayOutcome = document.getElementById('display-outcome');
 const rockButton = document.getElementById('rock-button');
 const paperButton = document.getElementById('paper-button');
