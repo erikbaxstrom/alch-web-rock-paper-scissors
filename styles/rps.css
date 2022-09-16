@@ -11,6 +11,7 @@
     justify-items: center;
     align-items: center;
     grid-template-rows: 50px 150px 40px 40px;
+    gap: 3px;
 }
 
 #opponent {
@@ -23,7 +24,6 @@
     justify-items: center;
     align-self: end;
     grid-template-columns: repeat(3, 150px);
-    gap: 10px;
 }
 
 #opponent-gesture {
@@ -34,6 +34,8 @@
 #opponent-gesture-img {
     border-radius: 50px;
     padding: 5px;
+    border-style: none;
+    background: transparent;
 }
 
 .selected {
@@ -45,7 +47,7 @@
 }
 
 .winner {
-    box-shadow: 0px 0px 20px 10px #5e5; /* right down blur spread color*/
+    box-shadow: 0px 0px 15px 8px #5e5; /* right down blur spread color*/
 }
 
 .hidden {
