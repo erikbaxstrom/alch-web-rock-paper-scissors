@@ -28,7 +28,7 @@
 }
 
 #player-choices button,
-#opponent-gesture img {
+img #opponent-gesture {
     border-radius: 50px;
 }
 
