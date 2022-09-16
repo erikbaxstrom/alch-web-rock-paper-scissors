@@ -10,11 +10,15 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-rows: 50px 150px 40px 40px;
     gap: 3px;
 }
 
+#player {
+    grid-template-rows: 50px 150px 40px 40px;
+}
+
 #opponent {
+    grid-template-rows: 90px 150px 40px;
     border-bottom: 2px solid black;
 }
 
