@@ -30,12 +30,13 @@
     <body>
         <header>
             <img src="/assets/html_css_js.png" />
-            <h1>Web App</h1>
+            <h1>Rock Paper Scissors</h1>
         </header>
 
         <main>
             <div id="gameboard">
                 <div id="opponent">
+                    <p class="score">Opponent Wins: <span id="opponent-score-display">5</span></p>
                     <div>
                         <img
                             src="./assets/ready.png"
@@ -43,6 +44,7 @@
                             id="opponent-gesture"
                         />
                     </div>
+                    <p class="score">Draws: <span id="draw-score-display">5</span></p>
                 </div>
                 <div id="player">
                     <div>
@@ -57,7 +59,10 @@
                             <img src="./assets/scissors.png" alt="Rock" />
                         </button>
                     </div>
-                    <div><button id="play-again-button" class="hidden">Play Again</button></div>
+                    <div>
+                        <button id="play-again-button" class="hidden">Play Again</button>
+                    </div>
+                    <p class="score">Player Wins: <span id="player-score-display">5</span></p>
                 </div>
             </div>
         </main>

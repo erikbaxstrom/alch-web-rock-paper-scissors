@@ -15,15 +15,15 @@
 #player {
     display: grid;
     justify-items: center;
-    align-items: center;
-    grid-template-rows: 1fr 4fr 1fr;
+    align-items: end;
+    grid-template-rows: 50px 150px 40px;
 }
 
 #player-choices {
     display: grid;
     justify-content: center;
     justify-items: center;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: repeat(3, 150px);
     gap: 10px;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .selected {
-    transform: translateY(-60px);
+    transform: translateY(-70px);
 }
 
 .winner {
@@ -43,4 +43,8 @@
 
 .hidden {
     display: none !important;
+}
+
+.score {
+    justify-self: left;
 }
