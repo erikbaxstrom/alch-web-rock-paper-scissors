@@ -73,6 +73,7 @@ const rockButton = document.getElementById('rock-button');
 const paperButton = document.getElementById('paper-button');
 const scissorsButton = document.getElementById('scissors-button');
 const playAgainButton = document.getElementById('play-again-button');
+const opponentGesture = document.getElementById('opponent-gesture');
 //scoreboard
 const opponentScoreDisplay = document.getElementById('opponent-score-display');
 const drawScoreDisplay = document.getElementById('draw-score-display');
@@ -84,6 +85,7 @@ function updateDisplay() {
         case 'shoot':
             opponentThrowImg.src = './assets/ready.png';
             opponentThrowImg.classList.remove('winner');
+            opponentGesture.classList.remove('opponent-threw');
             rockButton.classList.remove('selected', 'winner');
             paperButton.classList.remove('selected', 'winner');
             scissorsButton.classList.remove('selected', 'winner');
@@ -97,6 +99,7 @@ function updateDisplay() {
         case 'results':
             //display opponent throw
             opponentThrowImg.src = './assets/' + opponentThrow + '.png';
+            opponentGesture.classList.add('opponent-threw');
             if (gameOutcome === 'lose') {
                 opponentThrowImg.classList.add('winner');
                 displayOutcome.textContent = 'You Lose!';
