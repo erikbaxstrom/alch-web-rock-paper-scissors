@@ -7,9 +7,9 @@ let gameOutcome = '';
 let userThrow = '';
 let opponentThrow = '';
 //scoreboard
-let opponentScore = 2;
-let drawScore = 6;
-let playerScore = 14;
+let opponentScore = 0;
+let drawScore = 0;
+let playerScore = 0;
 
 const throwOptions = ['rock', 'paper', 'scissors'];
 /* Actions */
@@ -27,28 +27,35 @@ function throwGesture(gesture) {
     userThrow = gesture;
     if (opponentThrow === gesture) {
         gameOutcome = 'draw';
+        drawScore++;
     }
     if (opponentThrow === 'rock' && userThrow === 'paper') {
         gameOutcome = 'win';
+        playerScore++;
     }
     if (opponentThrow === 'paper' && userThrow === 'scissors') {
         gameOutcome = 'win';
+        playerScore++;
     }
     if (opponentThrow === 'scissors' && userThrow === 'rock') {
         gameOutcome = 'win';
+        playerScore++;
     }
     if (opponentThrow === 'paper' && userThrow === 'rock') {
         gameOutcome = 'lose';
+        opponentScore++;
     }
     if (opponentThrow === 'scissors' && userThrow === 'paper') {
         gameOutcome = 'lose';
+        opponentScore++;
     }
     if (opponentThrow === 'rock' && userThrow === 'scissors') {
         gameOutcome = 'lose';
+        opponentScore++;
     }
     // update display
     updateDisplay();
-    // updateScoreboard();
+    updateScoreboard();
 }
 
 function playAgain() {
