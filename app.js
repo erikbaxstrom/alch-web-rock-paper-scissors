@@ -79,9 +79,9 @@ function updateDisplay() {
             }
 
             //show user's throw
-            // rockButton.disabled = true;
-            // paperButton.disabled = true;
-            // scissorsButton.disabled = true;
+            rockButton.disabled = true;
+            paperButton.disabled = true;
+            scissorsButton.disabled = true;
             switch (userThrow) {
                 case 'rock':
                     if (gameOutcome === 'win') {
