@@ -52,6 +52,7 @@ const displayOutcome = document.getElementById('display-outcome');
 const rockButton = document.getElementById('rock-button');
 const paperButton = document.getElementById('paper-button');
 const scissorsButton = document.getElementById('scissors-button');
+const playAgainButton = document.getElementById('play-again-button');
 
 // display
 function updateDisplay() {
@@ -63,6 +64,7 @@ function updateDisplay() {
             paperButton.classList.remove('selected', 'winner');
             scissorsButton.classList.remove('selected', 'winner');
             displayOutcome.textContent = 'Shoot!';
+            playAgainButton.classList.add('hidden');
             break;
         case 'results':
             //display opponent throw
@@ -77,6 +79,9 @@ function updateDisplay() {
             }
 
             //show user's throw
+            // rockButton.disabled = true;
+            // paperButton.disabled = true;
+            // scissorsButton.disabled = true;
             switch (userThrow) {
                 case 'rock':
                     if (gameOutcome === 'win') {
@@ -100,6 +105,8 @@ function updateDisplay() {
                     }
                     break;
             }
+            //play again
+            playAgainButton.classList.remove('hidden');
     }
 }
 // event listeners
@@ -115,7 +122,9 @@ scissorsButton.addEventListener('click', () => {
 
 /* Component Play Again*/
 // get DOM
+
 // display
+
 // event listeners
 
 /* Component Scoreboard*/
